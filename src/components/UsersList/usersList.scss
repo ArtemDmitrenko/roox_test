@@ -1,13 +1,6 @@
-@import './style/style.scss';
+@import '../../style/variables.scss';
 
-.all-users {
-  display: flex;
-  max-width: 665px;
-  margin: 0 auto;
-  &__sidebar {
-    background-color: $sidebarColor;
-    min-width: 225px;
-  }
+.users-list {
   &__list {
     padding: 19px 62px 25px 34px;
     width: 100%;

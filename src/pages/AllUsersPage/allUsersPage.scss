@@ -1,0 +1,15 @@
+@import '../../style/variables.scss';
+
+.all-users-page {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 665px;
+  &__sidebar {
+    background-color: $sidebarColor;
+    min-width: 24%;
+  }
+  &__users {
+    width: 100%;
+  }
+}
