@@ -1,24 +1,52 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './style/style.scss';
+import ShortCard from './components/ShortCard/ShortCard';
+import Title from './components/Title/Title';
+
+import './app.scss';
 
 function App() {
+  const shortCardItemsArray = [
+    {
+      title: 'ФИО:',
+      text: 'Иванов А.А.',
+    },
+    {
+      title: 'город:',
+      text: 'Москва',
+    },
+    {
+      title: 'компания:',
+      text: 'ООО "Рога и копыта"',
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="all-users">
+      <div className="all-users__sidebar">
+        <div className="all-users__sidebar-title">
+          Сортировка
+        </div>
+        <div className="all-users__button">
+          Сортировка
+        </div>
+      </div>
+      <div className="all-users__list">
+        <div className="all-users__title">
+          <Title text="Список пользователей" />
+        </div>
+        <div className="all-users__all-cards">
+          <div className="all-users__shortCard">
+            <ShortCard cardItems={shortCardItemsArray} />
+          </div>
+          <div className="all-users__shortCard">
+            <ShortCard cardItems={shortCardItemsArray} />
+          </div>
+        </div>
+        <div className="all-users__total">
+          Найдено 10 пользователей
+        </div>
+      </div>
     </div>
   );
 }

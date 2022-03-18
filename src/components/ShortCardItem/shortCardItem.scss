@@ -1,0 +1,10 @@
+@import '../../style/variables.scss';
+
+.short-card-item {
+  &__title {
+    color: $textColorTitles;
+  }
+  &__text {
+    color: $textColor;
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../style/variables.scss';
+
+.short-card {
+  background-color: #F3F3F3;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    margin-bottom: 7px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: $textColorLink;
+    font-size: 12px;
+  }
+}

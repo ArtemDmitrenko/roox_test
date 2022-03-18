@@ -1,0 +1,29 @@
+@import './style/style.scss';
+
+.all-users {
+  display: flex;
+  max-width: 665px;
+  margin: 0 auto;
+  &__sidebar {
+    background-color: $sidebarColor;
+    min-width: 225px;
+  }
+  &__list {
+    padding: 19px 62px 25px 34px;
+    width: 100%;
+    background-color: white;
+  }
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__shortCard {
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__total {
+    text-align: end;
+    padding-top: 10px;
+  }
+}
