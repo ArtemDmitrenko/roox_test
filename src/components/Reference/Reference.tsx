@@ -1,5 +1,6 @@
 import React from 'react';
 import './reference.scss';
+import SortItems from '../../types/sortItems';
 
 type ReferenceProps = {
   isButton?: boolean,
@@ -35,7 +36,7 @@ function Reference(props: ReferenceProps) {
         </button>
       )
       : (
-        <a href={href} onClick={onClick} className=".reference-link">
+        <a href={href} className=".reference-link">
           {text}
         </a>
       )

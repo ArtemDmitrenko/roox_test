@@ -1,0 +1,15 @@
+@import '../../style/variables.scss';
+
+.user-card {
+  &__fields {
+    padding: 20px 6px 19px 12px;
+    border: 1px solid $userCardColor;
+    border-radius: 8px;  
+  }
+  &__button {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+  }
+}
+

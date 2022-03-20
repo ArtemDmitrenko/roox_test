@@ -4,10 +4,13 @@ import { User } from '../../types/user';
 
 import ShortCard from '../ShortCard/ShortCard';
 import Title from '../Title/Title';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 type AllUsersPageProps = {
   title?: string,
   usersList?: Array<User>,
+  onClick: (id: number) => void,
+  isLoaded: boolean
 };
 
 const defaultArray = [
@@ -63,7 +66,13 @@ function UsersList(props: AllUsersPageProps) {
   const {
     title = 'Крутой заголовок',
     usersList = defaultArray,
+    onClick,
+    isLoaded,
   } = props;
+
+  const handleOnClick = (id: number) => {
+    onClick(id);
+  };
 
   return (
     <div className="users-list">
@@ -71,20 +80,26 @@ function UsersList(props: AllUsersPageProps) {
         <div className="users-list__title">
           <Title text={title} />
         </div>
-        <div className="users-list__all-cards">
-          {usersList.map((user) => (
-            <div className="users-list__shortCard" key={user.id}>
-              <ShortCard user={user} />
+        {isLoaded ? (
+          <>
+            <div className="users-list__all-cards">
+              {usersList.map((user) => (
+                <div className="users-list__shortCard" key={user.id}>
+                  <ShortCard user={user} onClick={handleOnClick} />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="users-list__total">
-          Найдено
-          {' '}
-          {usersList.length}
-          {' '}
-          пользователей
-        </div>
+            <div className="users-list__total">
+              Найдено
+              {' '}
+              {usersList.length}
+              {' '}
+              пользователей
+            </div>
+          </>
+        ) : (
+          <LoadingSpinner />
+        )}
       </div>
     </div>
   );

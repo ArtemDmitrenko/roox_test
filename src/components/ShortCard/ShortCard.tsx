@@ -2,15 +2,23 @@ import React from 'react';
 import ShortCardItem from '../ShortCardItem/ShortCardItem';
 import { User } from '../../types/user';
 import './shortCard.scss';
+import Reference from '../Reference/Reference';
 
 type ShortCardProps = {
   user: User,
+  onClick: (id: number) => void
 };
 
 function ShortCard(props: ShortCardProps) {
   const {
-    user: { name, address, company },
+    user: {
+      id, name, address, company,
+    }, onClick,
   } = props;
+
+  const handleOnClick = () => {
+    onClick(id);
+  };
 
   return (
     <div className="short-card">
@@ -34,7 +42,14 @@ function ShortCard(props: ShortCardProps) {
           />
         </div>
       </div>
-      <div className="short-card__button">Подробнее</div>
+      <div className="short-card__button">
+        <Reference
+          text="Подробнее"
+          isButton
+          buttonType="button"
+          onClick={handleOnClick}
+        />
+      </div>
     </div>
   );
 }

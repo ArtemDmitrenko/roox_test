@@ -1,6 +1,7 @@
 @import '../../style/variables.scss';
 
 .users-list {
+  min-width: 100vh;
   &__list {
     padding: 19px 62px 25px 34px;
     width: 100%;

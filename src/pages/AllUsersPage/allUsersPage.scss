@@ -8,6 +8,7 @@
   &__sidebar {
     background-color: $sidebarColor;
     min-width: 24%;
+    min-height: 100vh;
   }
   &__users {
     width: 100%;

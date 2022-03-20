@@ -1,0 +1,53 @@
+@import '../../style/variables.scss';
+
+.input {
+  max-width: 211px;
+  margin-bottom: 10px;
+  &__label {
+    font-size: 8px;
+    margin-bottom: 3px;
+  }
+  &__field {
+    width: 100%;
+    border-radius: 5px;
+    height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid $inputBorderColor;
+    display: flex;
+    &_not-valid {
+      border-color: $inputBorderNotValidColor;
+    }
+    &:read-only {
+      opacity: 0.3;
+      user-select: none;
+    }
+  }
+}
+
+.textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  &__label {
+    font-size: 8px;
+    margin-bottom: 3px;
+  }
+  &__field {
+    width: 100%;
+    border-radius: 5px;
+    height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid $inputBorderColor;
+    display: flex;
+    min-height: 55px;
+    &_not-valid {
+      border-color: $inputBorderNotValidColor;
+    }
+    &:read-only {
+      opacity: 0.3;
+      user-select: none;
+    }
+  }
+}
+

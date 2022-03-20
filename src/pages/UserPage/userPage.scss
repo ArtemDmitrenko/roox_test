@@ -1,0 +1,25 @@
+@import '../../style/variables.scss';
+
+.user-page {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 665px;
+  background-color: #FFFFFF;
+  &__sidebar {
+    background-color: $sidebarColor;
+    min-width: 24%;
+  }
+  &__user {
+    width: 100%;
+    padding: 13px 45px 36px 50px;
+  }
+  &__titles-block {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__edit-button {
+    margin-bottom: 11px;
+  }
+}
