@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './title.scss';
 
 type TitleProps = {

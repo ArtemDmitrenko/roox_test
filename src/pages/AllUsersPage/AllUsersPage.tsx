@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
+
+import SortingContext from '../../context/sortingContext';
 import SideBar from '../../components/SideBar/SideBar';
 import UsersList from '../../components/UsersList/UsersList';
 import { User } from '../../types/user';
 import SortItems from '../../types/sortItems';
-import SortingContext from '../../context/sortingContext';
 
 import './allUsersPage.scss';
 

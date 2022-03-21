@@ -1,14 +1,18 @@
 import React from 'react';
-import './userCard.scss';
 import { Form } from 'react-final-form';
+
 import Reference from '../Reference/Reference';
-import validateName from '../../helpers/validateUserName';
-import validateNameAndSurname from '../../helpers/validateNameAndSurname';
 import Input from '../Input/Input';
-import validateEmail from '../../helpers/validateEmail';
-import validate from '../../helpers/validate';
+
 import { UserData, FormData } from '../../types/userCard';
 import { User } from '../../types/user';
+
+import validate from '../../helpers/validate';
+import validateName from '../../helpers/validateUserName';
+import validateNameAndSurname from '../../helpers/validateNameAndSurname';
+import validateEmail from '../../helpers/validateEmail';
+
+import './userCard.scss';
 
 type UserCardProps = {
   userData: User,

@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Field } from 'react-final-form';
-import './input.scss';
+
 import { InputProps } from '../../types/userCard';
+
+import './input.scss';
 
 function Input(props: InputProps) {
   const {

@@ -1,8 +1,10 @@
 import React from 'react';
+
 import ShortCardItem from '../ShortCardItem/ShortCardItem';
-import { User } from '../../types/user';
-import './shortCard.scss';
 import Reference from '../Reference/Reference';
+import { User } from '../../types/user';
+
+import './shortCard.scss';
 
 type ShortCardProps = {
   user: User,

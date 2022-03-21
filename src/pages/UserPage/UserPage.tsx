@@ -1,28 +1,15 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+
 import SideBar from '../../components/SideBar/SideBar';
-import UsersList from '../../components/UsersList/UsersList';
+import Title from '../../components/Title/Title';
+import UserCard from '../../components/UserCard/UserCard';
+import Reference from '../../components/Reference/Reference';
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
 import { User } from '../../types/user';
 
 import './userPage.scss';
-import Title from '../../components/Title/Title';
-import UserCard from '../../components/UserCard/UserCard';
-import validateName from '../../helpers/validateNameAndSurname';
-import Reference from '../../components/Reference/Reference';
-import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
-
-type UserData = {
-  name: string,
-  userName: string,
-  email: string,
-  street: string,
-  city: string,
-  zipcode: string,
-  phone: string,
-  website: string,
-  comment: string,
-};
 
 type UserItemPageParams = {
   id: string

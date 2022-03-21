@@ -1,10 +1,11 @@
 import React from 'react';
-import './usersList.scss';
-import { User } from '../../types/user';
 
 import ShortCard from '../ShortCard/ShortCard';
 import Title from '../Title/Title';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import { User } from '../../types/user';
+
+import './usersList.scss';
 
 type UsersList = {
   title: string,

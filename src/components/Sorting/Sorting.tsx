@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
+
 import Reference from '../Reference/Reference';
-import sortItems from '../../types/sortItems';
 import SortingContext from '../../context/sortingContext';
+import sortItems from '../../types/sortItems';
+
 import './sorting.scss';
 
 function Sorting() {
