@@ -2,15 +2,33 @@
 
 .reference-button {
   display: block;
-  padding: 5px 15px;
   color: $textColorButtons;
   font-size: 12px;
   text-decoration: none;
-  background-color: $buttonsColor;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   user-select: none;
+
+  &__solid {
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+
+  &__directed {
+    color: $textColorLink;
+    background: transparent;
+    background-color: none;
+    border: 0;
+    outline: none;
+  }
+
+  &_blue {
+    background-color: $buttonsColor;
+  }
+
+  &_green {
+    background-color: $buttonsActiveColor;
+  }
 
   &:hover {
     opacity: 0.7;

@@ -48,6 +48,7 @@ function ShortCard(props: ShortCardProps) {
           isButton
           buttonType="button"
           onClick={handleOnClick}
+          type="directed"
         />
       </div>
     </div>

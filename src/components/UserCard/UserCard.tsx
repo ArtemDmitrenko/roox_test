@@ -115,6 +115,8 @@ function UserCard(props: UserCardProps) {
                 buttonType="submit"
                 disabled={readOnlyData}
                 text="Отправить"
+                type="solid"
+                bgColor="green"
               />
             </div>
           </form>

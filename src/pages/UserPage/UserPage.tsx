@@ -79,6 +79,8 @@ function UserPage() {
               isButton
               buttonType="button"
               onClick={handleOnClick}
+              type="solid"
+              bgColor="blue"
             />
           </div>
         </div>

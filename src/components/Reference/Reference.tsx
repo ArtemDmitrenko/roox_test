@@ -1,6 +1,5 @@
 import React from 'react';
 import './reference.scss';
-import SortItems from '../../types/sortItems';
 
 type ReferenceProps = {
   isButton?: boolean,
@@ -8,6 +7,8 @@ type ReferenceProps = {
   disabled?: boolean,
   text: string,
   href?: string,
+  type?: string,
+  bgColor?: string,
   onClick?: () => void,
 };
 
@@ -18,8 +19,19 @@ function Reference(props: ReferenceProps) {
     disabled,
     text,
     href = '/',
+    type = 'solid',
+    bgColor,
     onClick,
   } = props;
+
+  const classesArr: Array<string> = ['reference-button'];
+
+  if (type === 'directed') classesArr.push('reference-button__directed');
+  if (type === 'solid') classesArr.push('reference-button__solid');
+  if (bgColor === 'blue') classesArr.push('reference-button_blue');
+  if (bgColor === 'green') classesArr.push('reference-button_green');
+
+  const classes = classesArr.join(' ');
 
   return (
     isButton
@@ -29,14 +41,14 @@ function Reference(props: ReferenceProps) {
             (buttonType === 'submit' ? 'submit' : 'button')
           }
           disabled={disabled}
-          className="reference-button"
+          className={classes}
           onClick={onClick}
         >
           {text}
         </button>
       )
       : (
-        <a href={href} className=".reference-link">
+        <a href={href} className={classes}>
           {text}
         </a>
       )

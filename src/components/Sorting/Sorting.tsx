@@ -22,6 +22,8 @@ function Sorting() {
           isButton
           buttonType="button"
           onClick={() => { handleOnClick(sortItems.CITY); }}
+          type="solid"
+          bgColor="blue"
         />
       </div>
       <div className="sorting__button">
@@ -30,6 +32,8 @@ function Sorting() {
           isButton
           buttonType="button"
           onClick={() => { handleOnClick(sortItems.COMPANY); }}
+          type="solid"
+          bgColor="blue"
         />
       </div>
     </div>
