@@ -1,23 +1,26 @@
 @import '../../style/variables.scss';
 
 .users-list {
-  min-width: 100vh;
   &__list {
-    padding: 19px 62px 25px 34px;
     width: 100%;
+    padding: 19px 62px 25px 34px;
     background-color: white;
   }
+
   &__title {
     margin-bottom: 15px;
   }
+
   &__shortCard {
     margin-bottom: 15px;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
   &__total {
-    text-align: end;
     padding-top: 10px;
+    text-align: end;
   }
 }

@@ -1,17 +1,20 @@
 @import '../../style/variables.scss';
 
 .short-card {
-  background-color: #F3F3F3;
-  border-radius: 8px;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+
   &__item {
     margin-bottom: 7px;
+
     &:last-child {
       margin: 0;
     }
   }
+
   &__button {
     display: flex;
     flex-direction: column;

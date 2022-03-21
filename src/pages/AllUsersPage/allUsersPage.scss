@@ -2,14 +2,16 @@
 
 .all-users-page {
   display: flex;
-  margin: 0 auto;
   justify-content: center;
   max-width: 665px;
+  margin: 0 auto;
+
   &__sidebar {
-    background-color: $sidebarColor;
     min-width: 24%;
     min-height: 100vh;
+    background-color: $sidebarColor;
   }
+
   &__users {
     width: 100%;
   }

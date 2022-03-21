@@ -7,7 +7,13 @@ import validateNameAndSurname from '../../helpers/validateNameAndSurname';
 import Input from '../Input/Input';
 import validateEmail from '../../helpers/validateEmail';
 import validate from '../../helpers/validate';
-import { UserCardProps, UserData, FormData } from '../../types/userCard';
+import { UserData, FormData } from '../../types/userCard';
+import { User } from '../../types/user';
+
+type UserCardProps = {
+  userData: User,
+  readOnlyData: boolean
+}
 
 function UserCard(props: UserCardProps) {
   const {

@@ -17,7 +17,7 @@ function ShortCardItem(props: ShortCardItemProps) {
       <p className="short-card-item__title">
         {title}
         <span className="short-card-item__text">
-      &nbsp;&nbsp;
+          &nbsp;&nbsp;
           {text}
         </span>
       </p>

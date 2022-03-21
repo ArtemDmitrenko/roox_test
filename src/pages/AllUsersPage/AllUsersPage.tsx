@@ -7,7 +7,6 @@ import SortItems from '../../types/sortItems';
 import SortingContext from '../../context/sortingContext';
 
 import './allUsersPage.scss';
-import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
 
 type AllUsersPageProps = {
   onClick: (id: number) => void;

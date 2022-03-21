@@ -1,5 +1,3 @@
-import { User } from './user';
-
 export type UserData = {
   name: string,
   userName: string,
@@ -45,9 +43,4 @@ export type FormData = {
   website: FieldProps,
   comment: FieldProps,
   onSubmit: (data: UserData) => void,
-}
-
-export type UserCardProps = {
-  userData: User,
-  readOnlyData: boolean
 }
